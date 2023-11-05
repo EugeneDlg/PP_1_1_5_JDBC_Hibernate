@@ -30,7 +30,7 @@ public class UserDaoJDBCImpl implements UserDao {
                 return;
             }
             updateResult = stmt.executeUpdate(createQuery);
-            System.out.println("Table created");
+            System.out.println("Table users created");
         } catch (SQLException e){
             System.out.println(e);
         }
@@ -59,7 +59,7 @@ public class UserDaoJDBCImpl implements UserDao {
             prepareStmt.setString(2, lastName);
             prepareStmt.setInt(3, age);
             updateResult = prepareStmt.executeUpdate();
-            System.out.println("User saved");
+            System.out.printf("User: %s %s saved%n", name, lastName);
         } catch (SQLException e){
             System.out.println(e);
         }
