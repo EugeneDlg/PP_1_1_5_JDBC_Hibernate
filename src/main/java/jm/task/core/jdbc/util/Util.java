@@ -1,6 +1,5 @@
 package jm.task.core.jdbc.util;
 
-import java.sql.Connection;
 import java.util.Properties;
 
 import jm.task.core.jdbc.model.User;
@@ -45,6 +44,6 @@ public class Util {
     }
 
     public static Session getSession() {
-        return Util.getSessionFactory().getCurrentSession();
+        return Util.getSessionFactory().openSession();
     }
 }
